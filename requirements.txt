@@ -1,0 +1,6 @@
+pyspark
+pydantic
+numpy
+typing
+pyyaml
+pandas
