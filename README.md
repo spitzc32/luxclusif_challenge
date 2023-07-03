@@ -22,6 +22,9 @@ This pipeline mainly serves as a pipeline for validation and format purpose. As 
 
 Output: The schema that we wrote under core/schema.py
 
+## DB setup
+simply run start.sh to establish a Docker PSQL instance
+
 ## Further Steps
 Since the scheduler is not setup, due to the dataset being static, we can further implement the solution with a scheduler,
 particularly Airflow, if we need to manage this or we can implement the built in tasks of Spark since this is mainly contained as a JobTask.
