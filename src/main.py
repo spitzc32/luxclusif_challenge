@@ -4,7 +4,7 @@ from config.session import start_spark
 from config.loader import Loader
 from environments import mod_path
 from core.schema import product_schema
-from core.tasks import Tasks
+from core.tasks import Tasks, write_df_to_sql
 
 def main():
     full_path = mod_path / "env.yaml"
@@ -27,7 +27,7 @@ def main():
         tasks = Tasks(data)
         tasks.apply_all()
         data = tasks.data_frame
-        data.printSchema()
+        write_df_to_sql(data)
 
 
 

@@ -15,6 +15,7 @@ def start_spark(
     sql_context = SQLContext(sc)
     config_dict = None
     sc.setLogLevel(log_level)
+    print("Setting up spark session..")
 
     if len(spark_config) > 0:
         config_dict = Loader(spark_config).get_contents()
